@@ -1,7 +1,12 @@
 import styled from "styled-components";
+import Axios from "axios";
 import {Header,AppNameComponent,AppIcon,SearchComponent,SearchIcon,SearchInput} from './components/headerComponent'
 import {RecipeContainer,CoverImage,IngredientsText,SeeMoreText,RecipeName} from './components/recipeComponent'
 import React, { useEffect, useState } from "react";
+
+const APP_ID = "1b51b56f";
+const APP_KEY = "3e14eb6e269f8a1148e2b99a00326437";
+
 
 const Container = styled.div`
   display: flex;
@@ -21,9 +26,17 @@ export const RecipeListContainer = styled.div`
 function App() {
   const [timeoutId,updateTimeoutId] = useState();
 
+  const fetchRecipe = (searchString) => {
+    Axios.get(
+      `https://api.edamam.com/search?q=${searchString}&app_id=${APP_ID}&app_key=${APP_KEY}`,
+    ).then(function(response){
+      console.log(response);
+    });
+  };
+
   const onTextChange = (event)=> {
       clearTimeout(timeoutId);
-      const timeout = setTimeout(() =>  console.log("API Call"),500);
+      const timeout = setTimeout(() =>  fetchRecipe(event.target.value),500);
       updateTimeoutId(timeout);
   };
 
