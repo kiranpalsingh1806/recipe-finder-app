@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Header,AppNameComponent,AppIcon,SearchComponent,SearchIcon,SearchInput} from './components/headerComponent'
+import {RecipeContainer,CoverImage,IngredientsText,SeeMoreText,RecipeName} from './components/recipeComponent'
 
 const Container = styled.div`
   display: flex;
@@ -7,48 +8,13 @@ const Container = styled.div`
   position:relative;
 `;
 
-const RecipeListContainer = styled.div`
+export const RecipeListContainer = styled.div`
     display:flex;
     flex-direction: row;
+    flex-wrap : wrap;
     padding:30px;
     justify-content: space-evenly;
-`
-
-const RecipeContainer = styled.div`
-    display:flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 300px;
-    box-shadow: 0 3px 10px 0 #aaa;
-`
-
-const CoverImage = styled.img`
-    height:200px;
-`
-
-const RecipeName = styled.span`
-    font-size:18px;
-    font-weight: bold;
-    color: black;
-    margin: 10px 0;
-`
-
-const IngredientsText = styled.span`
-    font-size:18px;
-    border: solid 1px green;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 12px;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 4px;
-    color: green;
-    text-align: center;
-`
-
-const SeeMoreText = styled(IngredientsText)`
-    color:#eb3300;
-    border: solid 1px #eb3300
+    gap: 20px;
 `
 
 function App() {
@@ -67,6 +33,36 @@ function App() {
       </SearchComponent>
 
       <RecipeListContainer>
+          <RecipeContainer>
+              <img src="/AppIcon.svg"/>
+              <RecipeName> Kulwant's Paneer</RecipeName>
+              <IngredientsText>Amanpal's Ingredients</IngredientsText>
+              <SeeMoreText>See Complete Recipe</SeeMoreText>
+          </RecipeContainer>
+          <RecipeContainer>
+              <img src="/AppIcon.svg"/>
+              <RecipeName> Kulwant's Paneer</RecipeName>
+              <IngredientsText>Amanpal's Ingredients</IngredientsText>
+              <SeeMoreText>See Complete Recipe</SeeMoreText>
+          </RecipeContainer>
+          <RecipeContainer>
+              <img src="/AppIcon.svg"/>
+              <RecipeName> Kulwant's Paneer</RecipeName>
+              <IngredientsText>Amanpal's Ingredients</IngredientsText>
+              <SeeMoreText>See Complete Recipe</SeeMoreText>
+          </RecipeContainer>
+          <RecipeContainer>
+              <img src="/AppIcon.svg"/>
+              <RecipeName> Kulwant's Paneer</RecipeName>
+              <IngredientsText>Amanpal's Ingredients</IngredientsText>
+              <SeeMoreText>See Complete Recipe</SeeMoreText>
+          </RecipeContainer>
+          <RecipeContainer>
+              <img src="/AppIcon.svg"/>
+              <RecipeName> Kulwant's Paneer</RecipeName>
+              <IngredientsText>Amanpal's Ingredients</IngredientsText>
+              <SeeMoreText>See Complete Recipe</SeeMoreText>
+          </RecipeContainer>
           <RecipeContainer>
               <img src="/AppIcon.svg"/>
               <RecipeName> Kulwant's Paneer</RecipeName>
