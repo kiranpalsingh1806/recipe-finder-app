@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction:column;
+  position:relative;
 `;
 
 const Header = styled.div`
@@ -18,9 +19,13 @@ const Header = styled.div`
   align-items: center;
 `;
 
+
+
 const AppNameComponent = styled.div`
     display:flex;
     align-items: center;
+    margin-left:auto;
+    margin-right:auto;
 `;
 
 const AppIcon = styled.img`
@@ -31,25 +36,40 @@ const AppIcon = styled.img`
 const SearchComponent = styled.div`
    display: flex;
    flex-direction: flow;
-   background-color: white;
    padding: 15px;
    margin-top:10px;
    border-radius: 6px;
-   width: 50%;
+   background-color:;
+   margin-left:auto;
+   margin-right:auto;
 `;
+
+const SearchIcon = styled.img`
+    width:36px;
+    height:36px;
+`
+
+const SearchInput = styled.input`
+  border: none;
+  outline: none;
+  margin-left:15px;
+  font-size: 16px;
+  font-weight: bold;
+`
 
 function App() {
   return (
     <Container>
       <Header>
-        <AppNameComponent>
-            <AppIcon src="/AppIcon.svg" />
-            Recipe Finder
-        </AppNameComponent>
+            <AppNameComponent>
+                <AppIcon src="/AppIcon.svg" />
+                Recipe Finder
+            </AppNameComponent>
       </Header>
+
       <SearchComponent>
-        <img src="/search-icon.svg "/>
-        <input />
+        <SearchIcon src="/search-icon.svg "/>
+        <SearchInput placeholder="Search Recipe"/>
       </SearchComponent>
     </Container>
   );
