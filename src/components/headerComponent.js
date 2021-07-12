@@ -48,7 +48,7 @@ export const RecipeImage = styled.img`
 export const Placeholder = styled.img`
   width: 120px;
   height: 120px;
-  margin: 200px;
+  margin: 0px 200px 300px 200px;
   opacity: 50%;
 `;
 export const SearchInput = styled.input`

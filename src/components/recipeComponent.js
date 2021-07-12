@@ -4,6 +4,7 @@ export const RecipeContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
+  background-color:#D9D8EC;
   width: 300px;
   box-shadow: 0 3px 10px 0 #aaa;
 `;

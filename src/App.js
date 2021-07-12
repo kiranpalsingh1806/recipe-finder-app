@@ -66,7 +66,7 @@ const RecipeListContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   padding: 30px;
-  gap: 20px;
+  gap: 100px;
   justify-content: space-evenly;
 `;
 
