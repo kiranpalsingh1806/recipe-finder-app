@@ -1,25 +1,24 @@
 import styled from "styled-components";
 
 export const Header = styled.div`
-  color: white;
-  background-color: black;
-  display:flex;
-  /* justify-content:space-between; */
+  background-color: #AAD5E7;
+  color: black;
+  display: flex;
+  justify-content: space-between;
   flex-direction: row;
+  align-items: center;
   padding: 20px;
   font-size: 25px;
   font-weight: bold;
-  box-shadow: 0 3px 6px 0 #555;
-  align-items: center;
+  /* box-shadow: 0 3px 6px 0 #555; */
 `;
 
-
-
-export const AppNameComponent = styled.div`
-    display:flex;
-    align-items: center;
-    margin-left:auto;
-    margin-right:auto;
+export const AppName = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:auto;
+  margin-right: auto;
 `;
 
 export const AppIcon = styled.img`
@@ -28,25 +27,35 @@ export const AppIcon = styled.img`
   margin: 15px;
 `
 
-export const SearchComponent = styled.div`
-   display: flex;
-   flex-direction: flow;
-   padding: 15px;
-   margin-top:10px;
-   border-radius: 6px;
-   margin-left:41%;
-   margin-right:59%;
+export const SearchBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  border-radius: 6px;
+  background-color: white;
+  width:50%;
+  margin-left:25%;
 `;
-
 export const SearchIcon = styled.img`
-    width:36px;
-    height:36px;
-`
-
+  width: 32px;
+  height: 32px;
+`;
+export const RecipeImage = styled.img`
+  width: 36px;
+  height: 36px;
+  margin: 15px;
+`;
+export const Placeholder = styled.img`
+  width: 120px;
+  height: 120px;
+  margin: 200px;
+  opacity: 50%;
+`;
 export const SearchInput = styled.input`
-  border: none;
-  outline: none;
-  margin-left:15px;
+  color: black;
   font-size: 16px;
   font-weight: bold;
-`
+  border: none;
+  outline: none;
+  margin-left: 15px;
+`;
