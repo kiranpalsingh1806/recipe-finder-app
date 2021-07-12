@@ -25,13 +25,13 @@ export const RecipeListContainer = styled.div`
 
 function App() {
   const [timeoutId,updateTimeoutId] = useState();
+  const [recipeList,updateRecipeList] = useState();
 
-  const fetchRecipe = (searchString) => {
-    Axios.get(
+  const fetchRecipe = async (searchString) => {
+    const response = await Axios.get(
       `https://api.edamam.com/search?q=${searchString}&app_id=${APP_ID}&app_key=${APP_KEY}`,
-    ).then(function(response){
-      console.log(response);
-    });
+    );
+    updateRecipeList(response.data.hits);
   };
 
   const onTextChange = (event)=> {
