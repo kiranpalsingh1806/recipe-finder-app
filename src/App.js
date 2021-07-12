@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Header,AppNameComponent,AppIcon,SearchComponent,SearchIcon,SearchInput} from './components/headerComponent'
 import {RecipeContainer,CoverImage,IngredientsText,SeeMoreText,RecipeName} from './components/recipeComponent'
+import React, { useEffect, useState } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -18,6 +19,14 @@ export const RecipeListContainer = styled.div`
 `
 
 function App() {
+  const [timeoutId,updateTimeoutId] = useState();
+
+  const onTextChange = (event)=> {
+      clearTimeout(timeoutId);
+      const timeout = setTimeout(() =>  console.log("API Call"),500);
+      updateTimeoutId(timeout);
+  };
+
   return (
     <Container>
       <Header>
@@ -29,7 +38,10 @@ function App() {
 
       <SearchComponent>
         <SearchIcon src="/search-icon.svg "/>
-        <SearchInput placeholder="Search Recipe Here"/>
+        <SearchInput
+          placeholder="Search Recipe Here"
+          onChange={onTextChange}
+          />
       </SearchComponent>
 
       <RecipeListContainer>
