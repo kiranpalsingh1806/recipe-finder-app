@@ -6,7 +6,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
 import Button from '@material-ui/core/Button';
-import {Header,AppName,AppIcon,SearchBox,SearchIcon,SearchInput,Placeholder} from './components/headerComponent';
+import {Header,AppName,SearchBox,SearchIcon,SearchInput,Placeholder} from './components/headerComponent';
 import {RecipeContainer,RecipeName,SeeNewTab,SeeMoreText,CoverImage,IngredientsText} from './components/recipeComponent';
 
 const APP_ID = "1b51b56f";
@@ -98,7 +98,7 @@ const AppComponent = () => {
         </AppName>
       </Header>
       <SearchBox>
-        <SearchIcon src="/search-icon.svg" />
+        <SearchIcon src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png" />
         <SearchInput
           placeholder="Enter the name of Dish"
           value={searchQuery}
@@ -119,7 +119,7 @@ const AppComponent = () => {
             <RecipeComponent key={index} recipe={recipe.recipe} />
           ))
         ) : (
-          <Placeholder src="/AppIcon.svg" />
+          <Placeholder src="https://freesvg.org/img/Gerald_G_Fast_Food_Lunch_Dinner_(FF_Menu)_6.png" />
         )}
       </RecipeListContainer>
     </Container>
