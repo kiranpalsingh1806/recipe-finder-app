@@ -5,6 +5,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
+import Button from '@material-ui/core/Button';
 import {Header,AppName,AppIcon,SearchBox,SearchIcon,SearchInput,Placeholder} from './components/headerComponent';
 import {RecipeContainer,RecipeName,SeeNewTab,SeeMoreText,CoverImage,IngredientsText} from './components/recipeComponent';
 
@@ -70,6 +71,7 @@ const RecipeListContainer = styled.div`
   justify-content: space-evenly;
 `;
 
+
 const AppComponent = () => {
   const [searchQuery, updateSearchQuery] = useState("");
   const [recipeList, updateRecipeList] = useState([]);
@@ -84,7 +86,7 @@ const AppComponent = () => {
   const onTextChange = (e) => {
     clearTimeout(timeoutId);
     updateSearchQuery(e.target.value);
-    const timeout = setTimeout(() => fetchData(e.target.value), 500);
+    const timeout = setTimeout(() => fetchData(e.target.value), 1500);
     updateTimeoutId(timeout);
   };
 
@@ -102,6 +104,9 @@ const AppComponent = () => {
           value={searchQuery}
           onChange={onTextChange}
         />
+        <Button variant="contained" color="primary">
+        Search
+        </Button>
       </SearchBox>
       <Header>
         <AppName>

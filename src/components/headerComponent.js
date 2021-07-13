@@ -33,8 +33,8 @@ export const SearchBox = styled.div`
   padding: 10px 10px;
   border-radius: 6px;
   background-color: white;
-  width:50%;
-  margin-left:25%;
+  width:27%;
+  margin-left:35%;
 `;
 export const SearchIcon = styled.img`
   width: 32px;
